@@ -1,19 +1,31 @@
 fileFormatVersion: 2
-guid: 511e27a0a18ac3d4798811ba2ed96716
+guid: 278537bfa82045e4fb8cf7cdb1ccc02f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -292847708112836234
-    second: 42_Actor2-2_spell-reacy_0
+      213: 4262973963261971752
+    second: Vib_DarkCutter_0
   - first:
-      213: -3112874369707581404
-    second: 42_Actor2-2_spell-reacy_1
+      213: 6669185920091351172
+    second: Vib_DarkCutter_1
   - first:
-      213: 3473204100965190034
-    second: 42_Actor2-2_spell-reacy_2
+      213: 6235447790232209756
+    second: Vib_DarkCutter_2
   - first:
-      213: 3035722777889297645
-    second: 42_Actor2-2_spell-reacy_3
+      213: 5850894904311790197
+    second: Vib_DarkCutter_3
+  - first:
+      213: 943074665623663756
+    second: Vib_DarkCutter_4
+  - first:
+      213: 3700047916522738587
+    second: Vib_DarkCutter_5
+  - first:
+      213: -6033660072889080576
+    second: Vib_DarkCutter_6
+  - first:
+      213: -5504808141130978758
+    second: Vib_DarkCutter_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,13 +111,97 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 42_Actor2-2_spell-reacy_0
+      name: Vib_DarkCutter_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d08febb30292b30800000000000000
+      internalID: 4262973963261971752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vib_DarkCutter_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488e41c6245bd8c50800000000000000
+      internalID: 6669185920091351172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vib_DarkCutter_2
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5909487ab2c88650800000000000000
+      internalID: 6235447790232209756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vib_DarkCutter_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 192
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57ab5a58aed823150800000000000000
+      internalID: 5850894904311790197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vib_DarkCutter_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 196
-        height: 128
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +209,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 679a5a0af889febf0800000000000000
-      internalID: -292847708112836234
+      spriteID: c843b296969761d00800000000000000
+      internalID: 943074665623663756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 42_Actor2-2_spell-reacy_1
+      name: Vib_DarkCutter_5
       rect:
         serializedVersion: 2
-        x: 196
+        x: 192
         y: 0
-        width: 196
-        height: 128
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4206923e049dcc4d0800000000000000
-      internalID: -3112874369707581404
+      spriteID: b931344f9f5395330800000000000000
+      internalID: 3700047916522738587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 42_Actor2-2_spell-reacy_2
+      name: Vib_DarkCutter_6
       rect:
         serializedVersion: 2
-        x: 392
+        x: 384
         y: 0
-        width: 196
-        height: 128
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +251,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 299c57e5abc433030800000000000000
-      internalID: 3473204100965190034
+      spriteID: 0052df3a122244ca0800000000000000
+      internalID: -6033660072889080576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 42_Actor2-2_spell-reacy_3
+      name: Vib_DarkCutter_7
       rect:
         serializedVersion: 2
-        x: 588
+        x: 576
         y: 0
-        width: 196
-        height: 128
+        width: 192
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de457a458cd012a20800000000000000
-      internalID: 3035722777889297645
+      spriteID: a3aa53f492efa93b0800000000000000
+      internalID: -5504808141130978758
       vertices: []
       indices: 
       edges: []
