@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &119139519
 Transform:
   m_ObjectHideFlags: 0
@@ -677,6 +677,7 @@ GameObject:
   - component: {fileID: 740360305}
   - component: {fileID: 740360306}
   - component: {fileID: 740360307}
+  - component: {fileID: 740360308}
   m_Layer: 0
   m_Name: KillerControler
   m_TagString: Untagged
@@ -736,6 +737,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.06
+--- !u!114 &740360308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740360304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1786e1e8fcbbb9a4098db344cf68a443, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingblade: {fileID: 3673531155593054059, guid: ad9c723b654c48044b83dc8ed5066cb6,
+    type: 3}
+  speed: 0.5
 --- !u!1 &1066090869
 GameObject:
   m_ObjectHideFlags: 0
