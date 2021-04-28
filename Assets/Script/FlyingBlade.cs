@@ -5,8 +5,7 @@ using UnityEngine;
 public class FlyingBlade : MonoBehaviour
 {
     private Animator _animator;
-    [SerializeField] private GameObject flyingblade;
-    [SerializeField] private float speed = 0.5f;
+    [SerializeField] private GameObject BaseBullet;
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -15,13 +14,9 @@ public class FlyingBlade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
-            _animator.SetTrigger("StartShout");
-        else if (Input.GetKeyUp(KeyCode.I))
-            _animator.SetTrigger("EndShout");
         if (Input.GetKeyDown(KeyCode.S))
         {
-            var gameObject = Instantiate(flyingblade, transform.position, Quaternion.identity);
+            var gameObject = Instantiate(BaseBullet, transform.position, Quaternion.identity);
         }
     }
 }
