@@ -8,32 +8,29 @@ namespace Script.BulletFloder
 {
     public class TSJBullet : BaseBullet
     {
-        private DateTime _stTime;
         private float ftime;
         [SerializeField] public List<GameObject> TSJBulletList;
+        [SerializeField] float WaitTimeShoot = 0.1f;
 
         void Start()
         {
-            _stTime = DateTime.Now;
+            StartCoroutine(WaitForDead());
+            StartCoroutine(WaitForShoot());
         }
 
-        // Update is called once per frame
         override protected void Update()
         {
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 3)
-            {
-                Destroy(this.gameObject);
-            }
+        }
 
-            ftime += Time.deltaTime;
-
-            if (ftime >= 0.1f)
+        private IEnumerator WaitForShoot()
+        {
+            while (true)
             {
                 var Bullet = Instantiate(TSJBulletList[Random.Range(0, TSJBulletList.Count)], transform.position, Quaternion.identity);
                 Bullet.GetComponent<BaseBullet>().SetDir(Random.insideUnitCircle);
-                ftime = 0f;
+                yield return new WaitForSeconds(WaitTimeShoot);
             }
-
         }
+
     }
 }
