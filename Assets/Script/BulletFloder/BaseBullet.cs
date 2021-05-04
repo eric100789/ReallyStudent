@@ -10,24 +10,39 @@ namespace Script.BulletFloder
         [SerializeField] protected float speed;
         protected Vector2 Dir;
         private DateTime _stTime;
+        [SerializeField] protected float BreakTime = 3;
+        protected float Timer = 0;
 
-        private void Start()
+        protected void Start()
         {
             _stTime = DateTime.Now;
+            StartCoroutine(counter());
         }
 
         public void SetDir(Vector2 initDir)
         {
             Dir = initDir;
         }
+        protected IEnumerator counter()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(1.0f);
+                Timer++;
+            }
+            
 
+        }
+
+     
         protected virtual void Update()
         {
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 1)
+            transform.Translate(Dir * speed);
+
+            if (Timer == BreakTime)
             {
                 Destroy(this.gameObject);
             }
-            transform.Translate(Dir.normalized * speed);
         }
     }
 }
