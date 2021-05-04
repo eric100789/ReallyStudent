@@ -95,5 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  WaitTimeDead: 3
   TSJBulletList:
   - {fileID: 6670595450349804090, guid: 0321059178200024da40809fb9e3390a, type: 3}
+  WaitTimeShoot: 0.1

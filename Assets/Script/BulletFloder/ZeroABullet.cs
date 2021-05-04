@@ -8,29 +8,27 @@ namespace Script.BulletFloder
     public class ZeroABullet : BaseBullet
     {
         [SerializeField] protected float SizeSpeed;
-        private DateTime _stTime;
+        [SerializeField] private float WaitTimeFly = 2.0f;
+        private float setSpeed = 0f;
 
         // Start is called before the first frame update
         void Start()
         {
-            _stTime = DateTime.Now;
+            StartCoroutine(WaitFlyAway());
+            StartCoroutine(WaitForDead());
         }
 
         // Update is called once per frame
         override protected void Update()
         {
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 2)
-            {
-                transform.Translate(speed, -speed, 0);
-            }
-
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 3)
-            {
-                Destroy(this.gameObject);
-            }
-
             this.gameObject.transform.localScale += new Vector3(SizeSpeed, SizeSpeed, 0);
-
+            transform.Translate(setSpeed, -setSpeed, 0);
         }
+
+        private IEnumerator WaitFlyAway()
+        {
+            yield return new WaitForSeconds(WaitTimeFly);
+            setSpeed = speed;
+        } 
     }
 }

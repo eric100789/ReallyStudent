@@ -643,11 +643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletList:
-  - {fileID: 2677590409097593680, guid: 88e07d6dd3fa01141b3c255be6de6303, type: 3}
-  - {fileID: 6670595450349804090, guid: 0321059178200024da40809fb9e3390a, type: 3}
   - {fileID: 1320000684748450332, guid: c01eb13af678c9143b214c1dc99776e8, type: 3}
   - {fileID: 3924338534209335163, guid: 768d564a963e7fd4582bc9078d25a8db, type: 3}
-  - {fileID: 2198426362214079863, guid: 81d711d2e252c174b887fd1904d5cbe9, type: 3}
 --- !u!114 &1870805803
 MonoBehaviour:
   m_ObjectHideFlags: 0

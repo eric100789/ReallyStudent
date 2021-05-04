@@ -8,12 +8,12 @@ namespace Script.BulletFloder
     public class BaseBullet : MonoBehaviour
     {
         [SerializeField] protected float speed;
+        [SerializeField] private float WaitTimeDead = 1.0f;
         protected Vector2 Dir;
-        private DateTime _stTime;
 
         private void Start()
         {
-            _stTime = DateTime.Now;
+            StartCoroutine(WaitForDead());
         }
 
         public void SetDir(Vector2 initDir)
@@ -23,11 +23,17 @@ namespace Script.BulletFloder
 
         protected virtual void Update()
         {
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 1)
-            {
-                Destroy(this.gameObject);
-            }
             transform.Translate(Dir.normalized * speed);
         }
+
+        protected IEnumerator WaitForDead()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(WaitTimeDead);
+                Destroy(this.gameObject);
+            }
+        }
+
     }
 }
