@@ -1,15 +1,15 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace Script.BulletFloder
 {
     public class BaseBullet : MonoBehaviour
     {
+        // -------variable---------
         [SerializeField] protected float speed;
-        [SerializeField] private float WaitTimeDead = 1.0f;
+        [SerializeField] protected float WaitTimeDead = 1.0f;
         protected Vector2 Dir;
+        // -------variable---------
 
         private void Start()
         {
@@ -28,11 +28,8 @@ namespace Script.BulletFloder
 
         protected IEnumerator WaitForDead()
         {
-            while (true)
-            {
-                yield return new WaitForSeconds(WaitTimeDead);
-                Destroy(this.gameObject);
-            }
+            yield return new WaitForSeconds(WaitTimeDead);
+            Destroy(this.gameObject);
         }
 
     }

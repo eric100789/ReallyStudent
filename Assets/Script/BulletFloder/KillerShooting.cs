@@ -6,22 +6,13 @@ using Random = UnityEngine.Random;
 namespace Script.BulletFloder
 {
 
-
     public class KillerShooting : MonoBehaviour
     {
-
         // -------variable---------
         [SerializeField] public List<GameObject> BulletList;
         //--------variable---------
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (Input.GetKeyDown(KeyCode.S))
             {               

@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Kate_Animation : MonoBehaviour
 {
+    // -------variable---------
     [SerializeField] private Animator Killer;
     [SerializeField] private Transform KillerPlace ;
     [SerializeField] private SpriteRenderer KillerRenderer;
@@ -13,14 +12,8 @@ public class Kate_Animation : MonoBehaviour
     [SerializeField] private Animator PowerfulMagic;
     [SerializeField] private Animator KillerGhost;
     [SerializeField] private SpriteRenderer KillerGhostRenderer;
+    // -------variable---------
 
-
-
-    // Update is called once per frame
-
-    void Start()
-    {
-    }
 
     void Update()
     {

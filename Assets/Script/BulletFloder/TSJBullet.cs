@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using Random = UnityEngine.Random;
 
 namespace Script.BulletFloder
 {
     public class TSJBullet : BaseBullet
     {
-        private float ftime;
+        // -------variable---------
         [SerializeField] public List<GameObject> TSJBulletList;
-        [SerializeField] float WaitTimeShoot = 0.1f;
+        [SerializeField] private readonly float waitTimeShoot = 0.1f;
+        // -------variable---------
 
         void Start()
         {
@@ -28,7 +28,7 @@ namespace Script.BulletFloder
             {
                 var Bullet = Instantiate(TSJBulletList[Random.Range(0, TSJBulletList.Count)], transform.position, Quaternion.identity);
                 Bullet.GetComponent<BaseBullet>().SetDir(Random.insideUnitCircle);
-                yield return new WaitForSeconds(WaitTimeShoot);
+                yield return new WaitForSeconds(waitTimeShoot);
             }
         }
 
