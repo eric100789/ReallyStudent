@@ -13,9 +13,8 @@ namespace Script.BulletFloder
         [SerializeField] protected float BreakTime = 3;
         protected float Timer = 0;
 
-        protected void Start()
+        protected virtual void Start()
         {
-            _stTime = DateTime.Now;
             StartCoroutine(counter());
         }
 

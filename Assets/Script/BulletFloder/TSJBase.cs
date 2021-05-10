@@ -12,15 +12,15 @@ namespace Script.BulletFloder
 
         private DateTime _stTime;
 
-        void Start()
+        /*override protected void Start()
         {
             _stTime = DateTime.Now;
-        }
+        }*/
 
         // Update is called once per frame
         override protected void Update()
         {
-            if (DateTime.Now.Subtract(_stTime).Seconds >= 3)
+            if (Timer >= BreakTime)
             {
                 Destroy(this.gameObject);
             }

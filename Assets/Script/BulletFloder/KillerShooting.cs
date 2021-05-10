@@ -12,6 +12,7 @@ namespace Script.BulletFloder
 
         // -------variable---------
         [SerializeField] public List<GameObject> BulletList;
+        protected int BulletMode = 0;
         //--------variable---------
 
         // Start is called before the first frame update
@@ -23,9 +24,17 @@ namespace Script.BulletFloder
         // Update is called once per frame
         void Update()
         {
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                BulletMode = (BulletMode + 1) % BulletList.Count;
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                BulletMode = (BulletMode - 1 + BulletList.Count) % BulletList.Count;
+            }
             if (Input.GetKeyDown(KeyCode.S))
-            {               
-                var Bullet = Instantiate(BulletList[Random.Range(0, BulletList.Count)], transform.position, Quaternion.identity);
+            {
+                var Bullet = Instantiate(BulletList[BulletMode], transform.position, Quaternion.identity);
                 Bullet.GetComponent<BaseBullet>().SetDir(Random.insideUnitCircle);
             }
         }
