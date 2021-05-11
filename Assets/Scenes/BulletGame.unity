@@ -255,7 +255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletList:
   - {fileID: 21300000, guid: d2153a3a361507b4ca06b6ab7f97955b, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: cdf0870f9d4b8d245a0c3ba2944ad9a0, type: 3}
   - {fileID: 21300000, guid: a2dfea03405e5064a8717d1d99fa2c3a, type: 3}
   - {fileID: 21300000, guid: 3073e74ced6b7f44abec8aceff25ae23, type: 3}
   - {fileID: 21300000, guid: 432b50da21eefc84dbf53a7a12666e7a, type: 3}
