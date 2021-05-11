@@ -1,24 +1,22 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 namespace Script.BulletFloder
 {
     public class ZeroABullet : BaseBullet
     {
+        // -------variable---------
         [SerializeField] protected float SizeSpeed;
-        [SerializeField] private float WaitTimeFly = 2.0f;
+        [SerializeField] private readonly float waitTimeFly = 2.0f;
         private float setSpeed = 0f;
+        // -------variable---------
 
-        // Start is called before the first frame update
         void Start()
         {
             StartCoroutine(WaitFlyAway());
             StartCoroutine(WaitForDead());
         }
 
-        // Update is called once per frame
         override protected void Update()
         {
             this.gameObject.transform.localScale += new Vector3(SizeSpeed, SizeSpeed, 0);
@@ -27,7 +25,7 @@ namespace Script.BulletFloder
 
         private IEnumerator WaitFlyAway()
         {
-            yield return new WaitForSeconds(WaitTimeFly);
+            yield return new WaitForSeconds(waitTimeFly);
             setSpeed = speed;
         } 
     }

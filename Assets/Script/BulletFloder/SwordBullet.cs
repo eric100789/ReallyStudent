@@ -6,8 +6,10 @@ namespace Script.BulletFloder
 {
     public class SwordBullet : BaseBullet
     {
-        [SerializeField] private float WaitTimeChange = 1.0f;
+        // -------variable---------
+        [SerializeField] private readonly float waitTimeChange = 1.0f;
         private float setSpeed;
+        // -------variable---------
 
         private void Start()
         {
@@ -26,9 +28,9 @@ namespace Script.BulletFloder
             while (true)
             {
                 setSpeed = speed;
-                yield return new WaitForSeconds(WaitTimeChange);
+                yield return new WaitForSeconds(waitTimeChange);
                 setSpeed = -speed;
-                yield return new WaitForSeconds(WaitTimeChange);
+                yield return new WaitForSeconds(waitTimeChange);
             }
         }
 
